@@ -1,0 +1,24 @@
+%h1 The form on this page is vulnerable to SQL injection
+
+%h2 Received params
+%pre#received-params
+  = params.inspect
+
+%h2 Data returned from database
+%pre#result
+  = result
+
+%br
+%br
+
+%form
+  %label
+    %fieldset
+      %legend Enter your SQL injection attack here:
+
+      %label
+        Number to look up
+        %input{:name => 'number_id'}
+
+    %fieldset
+      %input{:type => 'submit'}
