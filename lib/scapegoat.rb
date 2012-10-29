@@ -39,10 +39,7 @@ SQL
   db_exec "insert into numbers(id, name, val) values ( NULL, '#{name}', '#{value}' )"
 end
 
-module Gauntlt
-end
-
-class Gauntlt::Scapegoat < Sinatra::Base
+class Scapegoat < Sinatra::Base
   helpers do
     def page_title
     end
